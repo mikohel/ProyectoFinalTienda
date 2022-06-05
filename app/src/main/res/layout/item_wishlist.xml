@@ -8,6 +8,17 @@
 
 
 
+    <TextView
+        android:id="@+id/tit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="Te recomendamos estos 5 productos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ivArticle"
+        />
     <ImageView
 
         android:id="@+id/ivArticle"
@@ -15,7 +26,7 @@
         android:layout_width="180dp"
         android:layout_height="180dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tit"
         />
 
     <TextView
@@ -27,7 +38,7 @@
 
         app:layout_constraintLeft_toRightOf="@id/ivArticle"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tit"
         android:layout_margin="10dp"
 
         />
