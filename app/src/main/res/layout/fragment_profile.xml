@@ -74,10 +74,10 @@
 
     <TextView
         android:id="@+id/labelList"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="WISH LIST:"
-        android:textSize="30dp"
+        android:textSize="23dp"
         android:layout_marginTop="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/tvUsername"
