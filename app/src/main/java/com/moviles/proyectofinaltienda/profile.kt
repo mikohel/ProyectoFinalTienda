@@ -39,6 +39,7 @@ class profile : Fragment() {
                     binding.tvLevel.setText(jsonOb.getString("level").toString())
                     binding.tvUsername.setText(jsonOb.getString("user_name").toString())
                     binding.tvProductos.setText(jsonOb.getString("wish_list").toString())
+                    binding.tvFaltantes.setText(jsonOb.getString("pfaltantes").toString())
 
             }
         }

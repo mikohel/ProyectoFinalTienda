@@ -13,6 +13,7 @@ interface ArticleDao {
 
     @Delete
     fun delete(article: ArticleEntity)
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun save(article:ArticleEntity)
 

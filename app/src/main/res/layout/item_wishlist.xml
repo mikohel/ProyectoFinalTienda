@@ -31,6 +31,19 @@
         android:layout_margin="10dp"
 
         />
+    <TextView
+        android:id="@+id/tvCalif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="Calificacion:"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/ivArticle"
+        app:layout_constraintRight_toLeftOf="@id/tvStars"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+
+        />
 
     <TextView
         android:id="@+id/tvPrecio"
@@ -61,6 +74,7 @@
         android:layout_height="wrap_content"
         android:text="asdalskdjlaskdjalsdkjasldk"
         android:textSize="20dp"
+        android:maxLines="3"
         app:layout_constraintLeft_toRightOf="@id/ivArticle"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvPrecio"
@@ -74,8 +88,8 @@
         android:layout_height="wrap_content"
         android:text="Satars 5"
         android:textSize="15dp"
-
-        app:layout_constraintLeft_toRightOf="@id/ivArticle"
+app:layout_constraintBottom_toTopOf="@id/divider"
+        app:layout_constraintLeft_toRightOf="@id/tvCalif"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvDescription"
         android:layout_margin="10dp"
@@ -87,10 +101,22 @@
         android:layout_width="409dp"
         android:layout_height="1dp"
         android:background="@color/teal_200"
-        app:layout_constraintTop_toBottomOf="@id/ivArticle"
+        app:layout_constraintTop_toBottomOf="@id/btnCarrito"
         app:layout_constraintStart_toStartOf="@id/ivArticle"
         app:layout_constraintEnd_toEndOf="@id/tvDescription"
          />
+
+    <Button
+        android:id="@+id/btnCarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Al Carrito"
+
+        app:layout_constraintTop_toBottomOf="@id/ivArticle"
+        app:layout_constraintEnd_toEndOf="@id/ivArticle"
+        app:layout_constraintStart_toStartOf="@id/ivArticle"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

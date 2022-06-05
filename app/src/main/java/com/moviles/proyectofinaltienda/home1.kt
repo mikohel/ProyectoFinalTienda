@@ -17,11 +17,13 @@ import com.android.volley.toolbox.Volley
 import com.moviles.proyectofinaltienda.database.Article
 import com.moviles.proyectofinaltienda.databinding.ActivityMainBinding
 import com.moviles.proyectofinaltienda.databinding.FragmentHome1Binding
+import com.moviles.proyectofinaltienda.databinding.ItemHome1Binding
 import com.squareup.picasso.Picasso
 import org.json.JSONObject
 
 class home1 : Fragment() {
     private lateinit var binding: FragmentHome1Binding
+
     private lateinit var  queue: RequestQueue
     private val mainViewModel: MainViewModel by viewModels()
     override fun onCreateView(
@@ -30,6 +32,7 @@ class home1 : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding= FragmentHome1Binding.inflate(inflater,container,false)
+
         queue = Volley.newRequestQueue(context)
 
         binding.btnBuca.setOnClickListener { response ->
@@ -42,9 +45,12 @@ class home1 : Fragment() {
 
 
         binding.btnCarrito.setOnClickListener { response ->
-            mainViewModel.saveArticle(Article(article_id = binding.tvTittle.text.toString()))
+            mainViewModel.saveArticle(Article(article_id = binding.tvTittle.text.toString(),description =
+            binding.tvDescription.text.toString(),price = binding.tvPrecio.text.toString(),stars =
+            binding.tvStars.text.toString()))
             mainViewModel.getArticles()
         }
+
 
 
         mainViewModel.getArticles()
@@ -52,7 +58,7 @@ class home1 : Fragment() {
             if (!articleList.isNullOrEmpty()){
                 for (user in articleList){
                     Log.d("thesearetheusers", user.article_id)
-                    binding.rvWishList.adapter = Home1Adapter(articleList)
+                    binding.rvWishList.adapter = Home1Adapter(articleList,mainViewModel)
                 }
 
             }
@@ -79,8 +85,8 @@ class home1 : Fragment() {
             Picasso.get().load(img).into(binding.ivArticle)
             binding.tvMoneda.isVisible=true
             binding.tvCalif.isVisible=true
+            binding.btnCarrito.isVisible=true
         },
-
             Response.ErrorListener { errorMessage ->
                 binding.etBusca.text.clear()
 
