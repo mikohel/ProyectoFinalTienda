@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <ImageView
+
+        android:id="@+id/ivArticle"
+        android:src="@drawable/shop"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Producto"
+        android:textSize="15dp"
+
+        app:layout_constraintLeft_toRightOf="@id/ivArticle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5000.00"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/tvDescription"
+        app:layout_constraintLeft_toRightOf="@id/ivArticle"
+        app:layout_constraintTop_toBottomOf="@id/tvTittle"
+        android:layout_margin="10dp"
+
+        />
+    <TextView
+        android:id="@+id/tvMoneda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MXN"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/tvPrecio"
+        app:layout_constraintBottom_toTopOf="@id/tvDescription"
+        app:layout_constraintTop_toBottomOf="@id/tvTittle"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="asdalskdjlaskdjalsdkjasldk"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@id/ivArticle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPrecio"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvStars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Satars 5"
+        android:textSize="15dp"
+
+        app:layout_constraintLeft_toRightOf="@id/ivArticle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        android:layout_margin="10dp"
+
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="@color/teal_200"
+        app:layout_constraintTop_toBottomOf="@id/ivArticle"
+        app:layout_constraintStart_toStartOf="@id/ivArticle"
+        app:layout_constraintEnd_toEndOf="@id/tvDescription"
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
